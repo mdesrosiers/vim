@@ -38,7 +38,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'mileszs/ack.vim'
@@ -46,6 +45,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'w0rp/ale'
 
@@ -97,6 +97,14 @@ let g:NERDTreeDirArrows=1
 let g:NERDTreeMouseMode=2
 map <Leader>n :NERDTreeToggle<CR>
 map <Leader>f :NERDTreeFind<CR>
+
+" ALE
+nmap <Leader>l :ALEFix<CR>
+let g:ale_fixers = {
+\ 'javascript': [
+\   'prettier'
+\ ],
+\}
 
 " Ack
 cnoreabbrev Ack Ack!
